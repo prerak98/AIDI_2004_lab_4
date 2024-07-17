@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Species Predictor</title>
+</head>
+<body>
+    <h2>Fish Species Predictor</h2>
+    <form action="/predict" method="post">
+        <label for="Weight">Weight (g):</label><br>
+        <input type="number" id="Weight" name="Weight" step="any" required><br>
+        <label for="Length1">Length1 (cm):</label><br>
+        <input type="number" id="Length1" name="Length1" step="any" required><br>
+        <label for="Length2">Length2 (cm):</label><br>
+        <input type="number" id="Length2" name="Length2" step="any" required><br>
+        <label for="Length3">Length3 (cm):</label><br>
+        <input type="number" id="Length3" name="Length3" step="any" required><br>
+        <label for="Height">Height (cm):</label><br>
+        <input type="number" id="Height" name="Height" step="any" required><br>
+        <label for="Width">Width (cm):</label><br>
+        <input type="number" id="Width" name="Width" step="any" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    <br>
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
